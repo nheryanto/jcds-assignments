@@ -1,2 +1,2 @@
 # jcds-exercises
-This is a repository for class exercises in JCDS Purwadhika.
+This is a repository for class assignments in JCDS Purwadhika.
