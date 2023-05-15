@@ -1,6 +1,6 @@
 def func(intervals, newInterval):
     result = []
-    # flag to insert merged interval
+    # flag to insert new/merged interval
     inserted = False
     
     # check each interval
@@ -10,7 +10,7 @@ def func(intervals, newInterval):
             result.append(interval)
         # add interval if old lower bound is greater than new upper bound
         elif interval[0] > newInterval[1]:
-            # add new merged interval if not yet inserted
+            # add merged interval if not yet inserted for sorted result
             if not inserted:
                 result.append(newInterval)
                 inserted = True
@@ -25,7 +25,7 @@ def func(intervals, newInterval):
         #print(newInterval)
         #print(result)
         
-    # add new merged interval if not yet inserted
+    # add new/merged interval if not yet inserted
     if not inserted:
         result.append(newInterval)
 
@@ -34,15 +34,26 @@ def func(intervals, newInterval):
 if __name__ == '__main__':
     l1 = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]] 
     l2 = [4, 8]
-    result = func(l1, l2)
     print(f"l1 = {l1}")
     print(f"l2 = {l2}")
+    
+    result = func(l1, l2)
     print(f"result = {result}")
     print()
     
     l1 = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]] 
     l2 = [9, 15]
-    result = func(l1,l2)
     print(f"l1 = {l1}")
     print(f"l2 = {l2}")
+
+    result = func(l1,l2)
+    print(f"result = {result}")
+    print()
+
+    l1 = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]] 
+    l2 = [20, 23]
+    print(f"l1 = {l1}")
+    print(f"l2 = {l2}")
+
+    result = func(l1,l2)
     print(f"result = {result}")
