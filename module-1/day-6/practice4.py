@@ -56,8 +56,7 @@ def ticTacToe():
                   'mid-L','mid-M','mid-R',
                   'low-L','low-M','low-R']
 
-    val = None
-    i = 0    
+    val = None    
     while True:
         printGuide()
         key = input(f"Enter tic-tac-toe cell to fill in:\n({', '.join(listCell)})\n>> ")
@@ -85,8 +84,6 @@ def ticTacToe():
             break
         elif all(v!=' ' for v in board.values()):
             break
-
-        i += 1
     
 if __name__ == '__main__':
     ticTacToe()
