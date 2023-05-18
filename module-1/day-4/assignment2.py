@@ -6,4 +6,4 @@ def isLeapYear(year):
         result = True
     else:
         result = False
-    return(result)
+    return result

@@ -3,7 +3,8 @@ def caesar_cipher(message, key):
     source = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     for char in message.upper():
         if char.isalpha():
-            encription += source[source.index(char)-26+key]
+            idx = (source.index(char) + key) % len(source)
+            encription += source[idx]
         else:
             encription += char
     return encription

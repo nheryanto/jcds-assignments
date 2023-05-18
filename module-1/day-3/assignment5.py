@@ -1,9 +1,9 @@
 if __name__ == '__main__':
-    message = input("Enter the message to hack: ")
-    #message = "QIIX QI FC XLI VSWI FYWLIW XSRMKLX."
+    #message = input("Enter the message to hack: ")
+    message = "QIIX QI FC XLI VSWI FYWLIW XSRMKLX."
     source = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     n_key = 0
-    while n_key < 26:
+    while n_key < len(source):
         print(f"Key #{n_key}: {message}")
         new_message = ''
         for i in message:
