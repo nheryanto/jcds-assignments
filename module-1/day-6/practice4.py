@@ -29,7 +29,7 @@ def checkWin(board):
     ]
 
     for condition in win_condition:
-        if(condition):
+        if (condition):
             return condition
 
 def printGuide():
@@ -82,7 +82,7 @@ def ticTacToe():
         if win:
             print(f'Player {val} wins!\n')
             break
-        elif all(v!=' ' for v in board.values()):
+        elif ' ' not in board.values():
             break
     
 if __name__ == '__main__':
